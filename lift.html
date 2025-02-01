@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeMyTrip - Hero Section Replica</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #003366;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-left .logo {
+            max-height: 50px;
+        }
+
+        .navbar-right a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+
+        .navbar-right a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            background: url('https://via.placeholder.com/1920x800?text=MakeMyTrip+Hero+Image') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding-top: 80px; /* To avoid the fixed navbar */
+            background-size: cover;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Search Form */
+        .search-form {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .search-form input {
+            width: 48%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            font-size: 16px;
+        }
+
+        .search-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff9800;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .search-btn:hover {
+            background-color: #f57c00;
+        }
+
+        /* Special Fare Categories */
+        .special-fares {
+            display: flex;
+            justify-content: center;
+            padding: 40px 0;
+            background-color: #f5f5f5;
+        }
+
+        .fare-category {
+            flex: 1;
+            text-align: center;
+            padding: 30px;
+            margin: 0 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .fare-category h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .fare-category p {
+            font-size: 16px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            background-color: #003366;
+            color: white;
+            text-align: center;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .navbar-left,
+            .navbar-right {
+                margin-bottom: 10px;
+            }
+
+            .search-form {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .search-form input {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .special-fares {
+                flex-direction: column;
+            }
+
+            .fare-category {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="https://via.placeholder.com/150x50?text=MakeMyTrip" alt="MakeMyTrip Logo" class="logo">
+        </div>
+        <div class="navbar-right">
+            <a href="#">Home</a>
+            <a href="#">Hotels</a>
+            <a href="#">Flights</a>
+            <a href="#">Trains</a>
+            <a href="#">Holidays</a>
+            <a href="#">Offers</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Book Your Next Adventure with MakeMyTrip</h1>
+            <p>Find great deals for flights, hotels, and holiday packages.</p>
+
+            <!-- Search Form -->
+            <div class="search-form">
+                <form action="#" method="GET">
+                    <div class="input-container">
+                        <input type="text" placeholder="From" name="from" required>
+                        <input type="text" placeholder="To" name="to" required>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="date" placeholder="Departure" name="departure" required>
+                        <input type="date" placeholder="Return" name="return">
+                    </div>
+
+                    <button type="submit" class="search-btn">Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Fare Categories -->
+    <section class="special-fares">
+        <div class="fare-category">
+            <h3>Special Fares</h3>
+            <p>Explore budget-friendly deals.</p>
+        </div>
+        <div class="fare-category">
+            <h3>Family Packages</h3>
+            <p>Get the best family vacation deals.</p>
+        </div>
+        <div class="fare-category">
+            <h3>Luxury Stays</h3>
+            <p>Indulge in premium accommodations.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2025 MakeMyTrip. All Rights Reserved.</p>
+        <div>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
